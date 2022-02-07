@@ -2,6 +2,7 @@ package com.email.sendemail.services;
 
 import com.email.sendemail.models.EmailModel;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.mail.*;
 import javax.mail.internet.*;
@@ -10,6 +11,7 @@ import java.util.Date;
 import java.util.Properties;
 
 @Service
+@CrossOrigin
 public class SendEmailService {
 
     public void sendmail(EmailModel emailModel) throws AddressException, MessagingException, IOException {
